@@ -27,7 +27,8 @@ done
 #rm /tmp/decrypted-files/*.pgp
 
 # Move all PGP files to the archive directory
-aws s3 mv "s3://${S3_BUCKET}/${S3_INPUT_PATH}/" "s3://${S3_BUCKET}/${S3_ARCHIVE_PATH}/" --recursive --exclude "*" --include "*.pgp"
+#aws s3 mv "s3://${S3_BUCKET}/${S3_INPUT_PATH}/" "s3://${S3_BUCKET}/${S3_ARCHIVE_PATH}/" --recursive --exclude "*" --include "*.pgp"
+aws s3 mv s3://poc-gpg-bucket-uat-142603072023/in/ s3://poc-gpg-bucket-uat-142603072023/archive/ --recursive --exclude "*" --include "*.pgp"
 
 # Display a success message
 echo "Decryption complete. Files saved in ${LOCAL_DIR}"
