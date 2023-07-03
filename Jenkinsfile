@@ -20,5 +20,11 @@ pipeline {
                 sh 'aws s3 ls s3://poc-gpg-bucket-uat-142603072023/out/ '
             }
         }
+
+        stage('List S3 Archive') {
+            steps {
+                sh 'aws s3 ls s3://poc-gpg-bucket-uat-142603072023/archive/ '
+            }
+        }
     }
 }    
