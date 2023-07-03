@@ -10,7 +10,7 @@ S3_ARCHIVE_PATH="archive/"
 LOCAL_DIR="/tmp/decrypted-files-uat/"
 
 # Download the encrypted files from S3
-aws s3 cp "s3://${S3_BUCKET}/${S3_INPUT_PATH}" /tmp --recursive --exclude "*" --include "*.gpg"
+aws s3 cp "s3://${S3_BUCKET}/${S3_INPUT_PATH}" /tmp --recursive --exclude "*" --include "*.pgp"
 
 # Decrypt each file using gpg
 for file in /tmp/*.pgp; do
