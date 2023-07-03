@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Decrypt GPG File from S3') {
             steps {
-                echo "Hello GPG"
+                sh 'chmod +x decrypt-gpg-s3-uat.sh'
+                sh './decrypt-gpg-s3-uat.sh'
             }
         }
 
