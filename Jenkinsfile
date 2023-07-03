@@ -12,13 +12,13 @@ pipeline {
 
         stage('List S3 Outbox') {
             steps {
-                sh 'aws s3 ls s3://pgp-decrypted-files-12392023/inbox/ '
+                sh 'aws s3 ls s3://poc-gpg-bucket-uat-142603072023/in/ '
             }
         }
 
         stage('List S3 Inbox') {
             steps {
-                sh 'aws s3 ls s3://pgp-decrypted-files-12392023/outbox/ '
+                sh 'aws s3 ls s3://poc-gpg-bucket-uat-142603072023/out/ '
             }
         }
     }
