@@ -28,7 +28,7 @@ done
 
 # List the temporary encrypted files
 ls -ltr /tmp/*.pgp
-ls -ltr /tmp/decrypted-files/*.pgp
+ls -ltr /tmp/decrypted-files/
 
 # Move all PGP files to the archive directory
 #aws s3 mv "s3://${S3_BUCKET}/${S3_INPUT_PATH}/" "s3://${S3_BUCKET}/${S3_ARCHIVE_PATH}/" --recursive --exclude "*" --include "*.pgp"
