@@ -23,8 +23,8 @@ for file in /tmp/*.pgp; do
 done
 
 # Remove the temporary encrypted files
-rm /tmp/*.pgp
-rm /tmp/decrypted-files/*.pgp
+#rm /tmp/*.pgp
+#rm /tmp/decrypted-files/*.pgp
 
 # List the temporary encrypted files
 ls -ltr /tmp/*.pgp
