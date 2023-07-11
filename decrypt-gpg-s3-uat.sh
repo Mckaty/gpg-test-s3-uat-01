@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the S3 bucket name and prefix for the objects
-S3_BUCKET="poc-gpg-bucket-uat-142603072023"
+S3_BUCKET="poc-gpg-bucket-uat-11072023-2309"
 S3_INPUT_PATH="in/"
 S3_OUTPUT_PATH="out/"
 S3_ARCHIVE_PATH="archive/"
