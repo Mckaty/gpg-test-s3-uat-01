@@ -11,19 +11,19 @@ pipeline {
 
         stage('List S3 Outbox') {
             steps {
-                sh 'aws s3 ls s3://poc-gpg-bucket-uat-142603072023/in/ '
+                sh 'aws s3 ls s3://poc-gpg-bucket-uat-11072023-2309/in/ '
             }
         }
 
         stage('List S3 Inbox') {
             steps {
-                sh 'aws s3 ls s3://poc-gpg-bucket-uat-142603072023/out/ '
+                sh 'aws s3 ls s3://poc-gpg-bucket-uat-11072023-2309/out/ '
             }
         }
 
         stage('List S3 Archive') {
             steps {
-                sh 'aws s3 ls s3://poc-gpg-bucket-uat-142603072023/archive/ '
+                sh 'aws s3 ls s3://poc-gpg-bucket-uat-11072023-2309/archive/ '
             }
         }
     }
