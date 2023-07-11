@@ -22,8 +22,11 @@ for file in /tmp/*.pgp; do
   aws s3 cp "$output_file" "s3://${S3_BUCKET}/${S3_OUTPUT_PATH}${filename%.pgp}"
 done
 
+# List the temporary encrypted files
+ls -ltr /tmp/*.pgp
+
 # Remove the temporary encrypted files
-#rm /tmp/*.pgp
+rm /tmp/*.pgp
 #rm /tmp/decrypted-files/*.pgp
 
 # Move all PGP files to the archive directory
